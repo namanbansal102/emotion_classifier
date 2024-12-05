@@ -66,7 +66,7 @@ export default function WebcamCapture() {
     startCapturing();
     if (isCapturing && captureCount < 10) {
       const timer = setTimeout(() => {
-      // capture()
+      capture()
       }, 5000) // Capture every 2 seconds
 
       return () => clearTimeout(timer)
