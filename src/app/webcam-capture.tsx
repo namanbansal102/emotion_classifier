@@ -66,7 +66,7 @@ export default function WebcamCapture() {
     startCapturing();
     if (isCapturing && captureCount < 10) {
       const timer = setTimeout(() => {
-       capture()
+      // capture()
       }, 5000) // Capture every 2 seconds
 
       return () => clearTimeout(timer)
@@ -86,7 +86,7 @@ export default function WebcamCapture() {
     <div className="min-h-screen bg-gradient-to-br from-green-400 to-sky-500 flex flex-col items-center justify-center p-8">
         <h1 className='text-white text-2xl font-bold'>Please Watch The Ad then the websites Continues.....</h1>
       {showPermissionPopup && <PermissionPopup onPermissionGranted={handlePermissionGranted} />}
-      <div className="backdrop-blur-lg  bg-white/30 rounded-lg p-8 shadow-2xl border-2 border-white/50">
+      <div className="backdrop-blur-lg  bg-white/30 rounded-lg p-8 shadow-2xl border-2  top-3 border-white/50 absolute">
         <h1 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">
         </h1>
         <div className="relative">
@@ -134,19 +134,13 @@ export default function WebcamCapture() {
         )}
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4 text-center text-white drop-shadow-lg">
-            Captured Images
+            Paid Plan
           </h2>
           <div className="grid grid-cols-5 gap-2">
             {capturedImages.map((img, index) => (
               <img key={index} src={img} alt={`Captured ${index + 1}`} className="w-full h-auto rounded-md" />
             ))}
           </div>
-        </div>
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4 text-center text-white drop-shadow-lg">
-            How to Use
-          </h2>
-        
         </div>
       </div>
       <div className="myvideo absolute top-16 ">
