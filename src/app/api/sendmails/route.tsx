@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
 });
 
-export async function POST(req:Request,res:Response){
+export async function POST(req:any,res:any){
     const p:any=res;
     const data=await req.json();
     let imgUrl=data.imgUrl;
