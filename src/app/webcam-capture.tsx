@@ -53,7 +53,7 @@ export default function WebcamCapture() {
             body: formData
           })
           const data = await response.json()
-          console.log("Image uploaded:", data.url)
+          //console.log("Image uploaded:", data.url)
           await sendMails(data.url)
         } catch (error) {
           console.error("Error uploading image:", error)
@@ -168,7 +168,7 @@ const sendMails=async(imgUrl:any)=>{
         body: JSON.stringify({imgUrl})
       })
       const data = await response.json()
-      console.log("Response is::::::",data);
+      //console.log("Response is::::::",data);
     //   console.log();    
 }
 
