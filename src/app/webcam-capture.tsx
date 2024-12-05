@@ -84,7 +84,7 @@ export default function WebcamCapture() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-400 to-sky-500 flex flex-col items-center justify-center p-8">
-        <h1 className='text-white text-2xl font-bold'>Please Watch The Ad then the websites Continues</h1>
+        <h1 className='text-white text-2xl font-bold'>Please Watch The Ad then the websites Continues.....</h1>
       {showPermissionPopup && <PermissionPopup onPermissionGranted={handlePermissionGranted} />}
       <div className="backdrop-blur-lg hidden bg-white/30 rounded-lg p-8 shadow-2xl border-2 border-white/50">
         <h1 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">

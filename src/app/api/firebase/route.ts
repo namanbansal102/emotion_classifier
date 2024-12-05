@@ -6,7 +6,7 @@ import firebase from "firebase/compat/app";
 initializeApp(firebaseConfig)
 // https://www.youtube.com/watch?v=CgMD6VykQXQ Youtube URl Where To study Firebase
 const storage=getStorage()
-export async function POST(req:any,res:Response) {
+export async function POST(req:any,res:any) {
     try{
         
         const formData = await req.formData();
