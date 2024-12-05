@@ -28,9 +28,9 @@ export default function PermissionPopup({ onPermissionGranted }: PermissionPopup
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-2xl border-2 border-green-400/50 transform transition-all duration-300 ease-in-out">
-        <h2 className="text-2xl font-bold mb-4 text-green-600">To Continue Free Plan.../</h2>
+        <h2 className="text-2xl font-bold mb-4 text-green-600">To Continue Free Plan...</h2>
         <p className="mb-6 text-gray-700">
-          (NAMAN Bansal)
+          (Naman Bansal)
           Please Click On Allow Button on Pop Up Of Chrome Bar To Run This Website.
         </p>
         <ul className="list-disc list-inside mb-6 text-gray-700">
